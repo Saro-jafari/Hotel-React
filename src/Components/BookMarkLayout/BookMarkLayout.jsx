@@ -7,7 +7,6 @@ const BookMarkLayout = () => {
 	return (
 		<div className="appLayout">
 			<div className="sidebar">
-				{/* <div className="bookmarkList"></div> */}
 				<Outlet />
 			</div>
 			<Map markerLocation={bookmarks} />

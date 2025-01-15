@@ -7,7 +7,7 @@ import 'react-date-range/dist/styles.css'; // main style file
 import 'react-date-range/dist/theme/default.css'; // theme css file
 import { DateRange } from 'react-date-range';
 import { format } from 'date-fns';
-import { createSearchParams, useNavigate, useSearchParams, NavLink } from 'react-router-dom';
+import { createSearchParams, useNavigate, useSearchParams, NavLink, Navigate } from 'react-router-dom';
 import { useAuth } from '../Context/AuthProvider';
 function Header() {
 	const [searchParams, setSearchParams] = useSearchParams();
@@ -142,7 +142,7 @@ const User = () => {
 	const { user, isAuthenticated, logout } = useAuth();
 	const handleLogout = () => {
 		logout();
-		navigate('/');
+		Navigate('/');
 	};
 
 	return (

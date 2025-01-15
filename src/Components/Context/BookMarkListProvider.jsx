@@ -1,5 +1,5 @@
-import React, { createContext, useContext, useState, useEffect, useReducer } from 'react';
-import useFetch from '../../Hooks/useFetch';
+import { createContext, useContext, useEffect, useReducer } from 'react';
+
 import axios from 'axios';
 import toast from 'react-hot-toast';
 
@@ -31,7 +31,6 @@ const bookMarkReducer = (state, action) => {
 				isLoading: false,
 				currentBookMark: action.payload,
 				bookmarks: [...state.bookmarks, action.payload],
-				currentBookMark: action.payload,
 			};
 		case 'bookmark/deleted':
 			return {
